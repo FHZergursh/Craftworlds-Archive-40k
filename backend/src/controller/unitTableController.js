@@ -49,7 +49,29 @@ export const CreateUnit = async (req, res) => {
 }
 
 export const UpdateUnit = async (req, res) => {
-  
+  try {
+    try {
+      const {id} = req.params
+
+      if (!id) 
+      {
+      return res.status(400).json({success: false, message: "Missing fields! Make sure to include all data"})
+      }
+
+      const deleted = await sql.query("DELETE FROM unittable WHERE id = $1", [id])
+
+      return res.status(200).json({success: true, message: deleted})
+
+    } catch (error) {
+    console.log(error)
+    return res.status(400).json({success: false, message: error})
+    }
+
+  } catch (error) {
+    console.log(error)
+    return res.status(400).json({success: false, message: error})
+  }
+
 }
 
 export const DeleteUnit = async (req, res) => {
