@@ -2,6 +2,7 @@ import express from "express"
 import unitTableRouter from "./routes/unitTableRouter.js";
 import 'dotenv/config';
 import { setupDB } from "./db/db.js";
+import cors from "cors"
 
 
 const app = express();
