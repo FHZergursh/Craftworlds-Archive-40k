@@ -2,5 +2,6 @@
 
 body { /* global classes for the entire page */
   background-color: var(--color-gray-800);
-  color: white;
+  color: var(--color-blue-100);
+  
 }

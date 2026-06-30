@@ -2,7 +2,23 @@ import React from 'react'
 
 const Blogs = () => {
   return (
-    <div>Blogs</div>
+    <div>
+      <div>
+        
+        <div>
+          Blog block 1
+        </div>
+
+        <div>
+          Blog block 2
+        </div>
+
+
+      </div>
+      
+
+
+    </div>
   )
 }
 
