@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router'
 
 const Header = () => {
   return (
@@ -10,14 +11,13 @@ const Header = () => {
         </div>
 
         <div className='flex gap-30'>
-          <div className='text-blue-300'>Blogs</div>
-          <div className='text-blue-300'>Tutorials</div>
-          <div className='text-blue-300'>Units</div>
-          <div className='text-blue-300'>Other resources </div>
-          <div></div>
+          <Link to={"/blogs"} className='text-blue-300'>Blogs</Link>
+          <Link to={"/tutorials"} className='text-blue-300'>Tutorials</Link>
+          <Link to={"/units"} className='text-blue-300'>Units</Link>
+          <Link to ={"/resources"} className='text-blue-300'>Other resources </Link>
         </div>
 
-        <div className='text-gray-400 text-xs'>Contact me </div>
+        <div className='text-gray-400 text-xs'>Contact me</div>
 
 
 
