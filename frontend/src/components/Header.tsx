@@ -1,4 +1,3 @@
-import React from 'react'
 import { Link } from 'react-router'
 
 const Header = () => {
@@ -7,7 +6,7 @@ const Header = () => {
       <div className=' w-full flex justify-start items-center gap-50'>
 
         <div className='h-full w-[15%] flex justify-center items-center'>
-          <h1 className='text-blue-500 text-xl'>Craftworlds Archive 40K</h1>
+          <Link to ={"/"} ><h1 className='text-blue-500 text-xl'>Craftworlds Archive 40K</h1></Link>
         </div>
 
         <div className='flex gap-30'>
@@ -17,7 +16,7 @@ const Header = () => {
           <Link to ={"/resources"} className='text-blue-300'>Other resources </Link>
         </div>
 
-        <div className='text-gray-400 text-xs'>Contact me</div>
+        <Link><div className='text-gray-400 text-xs'>Contact me</div></Link>
 
 
 
