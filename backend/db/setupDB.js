@@ -7,7 +7,6 @@ export const sql = neon(process.env.DATABASE_URL);
 
 export async function initSimpleProfileTable() { // contains less details, will link one to one with a more detailed table in future
   try {
-    console.log('Connection to neon established');
 
     // Create a new table
     await sql`
@@ -23,7 +22,9 @@ export async function initSimpleProfileTable() { // contains less details, will 
         cost INT
       );
     `;
-    console.log('Finished initialising DB.');
+
+    
+    console.log('Simple Profile DB initialised');
 
   } catch (err) {
     console.error('Connection failed.', err);
@@ -32,3 +33,24 @@ export async function initSimpleProfileTable() { // contains less details, will 
 
 
 //Gonna need a more detailed profile here at some point, but simple_profile is priority to start with.
+
+
+export async function initBlogTable() {
+  try {
+    
+    await sql`
+    CREATE TABLE IF NOT EXISTS blogs (
+      blogId SERIAL PRIMARY KEY,
+      title VARCHAR(255) NOT NULL,
+      tags VARCHAR(500),
+      imageUrl VARCHAR(1000),
+      content TEXT NOT NULL
+    )`
+    console.log("Blog DB initalised");
+
+
+  } catch (error) {
+    console.log("error, ", error)
+  }
+
+}
