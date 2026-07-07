@@ -30,9 +30,8 @@ export async function initSimpleProfileTable() { // contains less details, will 
     console.error('Connection failed.', err);
   }
 }
-
-
 //Gonna need a more detailed profile here at some point, but simple_profile is priority to start with.
+
 
 
 export async function initBlogTable() {
@@ -42,11 +41,12 @@ export async function initBlogTable() {
     CREATE TABLE IF NOT EXISTS blogs (
       blogId SERIAL PRIMARY KEY,
       title VARCHAR(255) NOT NULL,
-      tags VARCHAR(500),
+      tags VARCHAR(500), 
       imageUrl VARCHAR(1000),
       content TEXT NOT NULL
     )`
     console.log("Blog DB initalised");
+    //using concatinated string instead of array for now when it comes to blogs, but tbh its basically the same thing
 
 
   } catch (error) {
