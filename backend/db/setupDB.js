@@ -47,7 +47,7 @@ export async function initBlogTable() {
     )`
     console.log("Blog DB initalised");
     //using concatinated string instead of array for now when it comes to blogs, but tbh its basically the same thing
-
+    //use \n if you want a new line
 
   } catch (error) {
     console.log("error, ", error)
