@@ -16,7 +16,7 @@ const Header = () => {
           <Link to ={"/resources"} className='text-blue-300'>Other resources </Link>
         </div>
 
-        <Link><div className='text-gray-400 text-xs'>Contact me</div></Link>
+        <Link to={"/home"}><div className='text-gray-400 text-xs'>Contact me</div></Link>
 
 
 
