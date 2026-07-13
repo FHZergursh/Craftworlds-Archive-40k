@@ -14,6 +14,14 @@ export const BlogDummyData : Blog[] = [
     tags: "test",
     imageUrl: "test",
     content: "test",
-  }
+  },
+  {
+    BlogId: 3,
+    title: "column test",
+    tags: "test",
+    imageUrl: "test",
+    content: "test",
+  },
+  
 ];
 
