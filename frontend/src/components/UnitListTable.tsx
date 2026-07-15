@@ -1,17 +1,6 @@
 import React, { useEffect, useState } from "react";
+import type { unitInterface } from "../types/units.ts";
 
-
-interface unitInterface {
-  id: number,
-  name: string,
-  movement: string,
-  toughness: number,
-  save: number,
-  wounds: number,
-  leadership: number,
-  oc: number,
-  cost: number
-}
 
 const UnitListTable = () => {
   const [unit, setUnit] = useState<unitInterface[]>([])
