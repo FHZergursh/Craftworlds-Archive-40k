@@ -14,11 +14,11 @@ const BlogCard = ({blog}: TodoListProps) => {
         </h1>
       </div>
       <div className='bg-zinc-400 h-[70%] flex justify-center items-center'>
-        <img src={blog.imageUrl} />
+        <img src={blog.imageUrl} /> 
       </div>
-      <div className='bg-zinc-400 h-[10%] pl-2'>
+      <div className='bg-zinc-400 h-[10%] pl-2 text-slate-300'>
         Tags: 
-        <label className='text-slate-300 ml-2'>
+        <label className='text-zinc-300 ml-2'>
           {blog.tags}
         </label>
       </div>

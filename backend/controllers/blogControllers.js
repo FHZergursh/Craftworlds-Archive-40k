@@ -17,7 +17,7 @@ export const createBlog = async (req, res) => {
 
     
 
-    return res.status(200).json({success: true, message: blog})
+    return res.status(200).json({success: true, data: blog})
 
 
 
@@ -30,7 +30,7 @@ export const createBlog = async (req, res) => {
 export const getAllBlogs = async (req, res) => {
   try {
     const blogs = await sql.query(`SELECT * FROM blogs`)
-    return res.status(200).json({success: true, message: blogs})
+    return res.status(200).json({success: true, data: blogs})
 
   } catch (error) {
     console.log("Error in getAllBlogs, ", error)
@@ -49,7 +49,7 @@ export const getBlog = async (req, res) => {
     }
 
     const blog = await sql.query(`SELECT * FROM blogs WHERE blogId = $1`, [id]);
-    return res.status(200).json({success: true, message: blog})
+    return res.status(200).json({success: true, data: blog})
 
   } catch (error) {
     console.log("Error in getAllBlogs, ", error)
@@ -80,7 +80,7 @@ export const updateBlog = async (req, res) => { //dedicated api for tag change m
     {
       const updated = await sql.query(`UPDATE blogs SET title = $1, tags = $2, imageUrl = $3, content = $4 WHERE blogId = $5`, 
       [title, tags, imageUrl, content, id ])
-      return res.status(200).json({success: true, message: updated})
+      return res.status(200).json({success: true, data: updated})
 
     }
 
@@ -100,7 +100,7 @@ export const DeleteBlog = async (req, res) => {
     }
 
     const deleted = await sql.query(`DELETE FROM blogs WHERE blogId = $1`, [id])
-    return res.status(200).json({success: true, message: deleted})
+    return res.status(200).json({success: true, data: deleted})
 
   } catch (error) {
     console.log("Error in DeleteBlog, ", error)
