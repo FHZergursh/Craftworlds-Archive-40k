@@ -1,13 +1,18 @@
 import React from 'react'
 import type { Blog } from '../types/blogs.tsx';
 
-interface TodoListProps {
+interface BlogListProps {
   blog: Blog;
 }
 
-const BlogCard = ({blog}: TodoListProps) => {
+const BlogCard = ({blog}: BlogListProps) => {
+  function openBlog() {
+    alert('You clicked me!')
+  }
+
+
   return (
-    <div className='flex flex-col bg-gray-400 w-[30vw] h-[30vh]'>
+    <div className='flex flex-col bg-gray-400 w-[30vw] h-[30vh]' onClick={openBlog}>
       <div className='bg-zinc-500 h-[20%] flex justify-center border-b-2'>
         <h1 className='text-3xl'>
           {blog.title}
