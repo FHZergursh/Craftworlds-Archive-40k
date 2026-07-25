@@ -30,7 +30,7 @@ const Blogs = () => {
       <div className="flex gap-10 w-[80vw] columns-2 ml-[10vw]">
         <div className="w-full h-full grid grid-cols-2 gap-y-8">
             {blogs ? (
-              blogs.map((index) => <div>
+              blogs.map((index) => <div key={index.blogid}>
                 <BlogCard blog={index} />
               </div>)
             ) : (

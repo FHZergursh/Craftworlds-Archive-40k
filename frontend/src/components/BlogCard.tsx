@@ -1,13 +1,17 @@
 import React from 'react'
 import type { Blog } from '../types/blogs.tsx';
+import { useNavigate } from 'react-router';
 
 interface BlogListProps {
   blog: Blog;
 }
 
 const BlogCard = ({blog}: BlogListProps) => {
+  const navigate = useNavigate()
+
+
   function openBlog() {
-    alert('You clicked me!')
+    navigate(`/blogs/${blog.blogid}`)
   }
 
 
