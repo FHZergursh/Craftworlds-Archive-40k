@@ -2,21 +2,21 @@ import type { Blog } from "../types/blogs.ts";
 
 export const BlogDummyData : Blog[] = [
   {
-    BlogId: 1,
+    blogid: 1,
     title: "test",
     tags: "test",
     imageUrl: "test",
     content: "test",
   },
   {
-    BlogId: 2,
+    blogid: 2,
     title: "diff",
     tags: "test",
     imageUrl: "test",
     content: "test",
   },
   {
-    BlogId: 3,
+    blogid: 3,
     title: "column test",
     tags: "test",
     imageUrl: "test",
